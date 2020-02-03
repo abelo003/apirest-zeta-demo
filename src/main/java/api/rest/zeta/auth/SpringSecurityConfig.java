@@ -29,7 +29,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 auth.inMemoryAuthentication()
 			.withUser("zeta").password(passwordEncoder().encode("zeta")).authorities("ROLE_ADMIN")
 			.and()
-			.withUser("user").password("user").authorities("ROLE_USER");
+			.withUser("user").password(passwordEncoder().encode("user")).authorities("ROLE_USER");
                 
 	}
 

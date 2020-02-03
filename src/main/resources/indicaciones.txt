@@ -1,0 +1,24 @@
+Generar token
+
+POST 
+http://localhost:8080/oauth/token
+
+Headers
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YW5ndWxhcmFwcDoxMjM0NQ==
+
+Data
+username=user&password=user&grant_type=password
+
+
+Refresh token
+
+POST
+http://localhost:8080/oauth/token
+
+Headers
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YW5ndWxhcmFwcDoxMjM0NQ==
+
+Data
+grant_type=refresh_token&refresh_token=REFRESH_TOKEN_OBTENIDO

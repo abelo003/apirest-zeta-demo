@@ -36,9 +36,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         clients.inMemory().withClient("angularapp")
                 .secret(passwordEncoder.encode("12345"))
                 .scopes("read", "write")
-                .authorizedGrantTypes("password", "refresh_token")
-                .accessTokenValiditySeconds(3600)
-                .refreshTokenValiditySeconds(3600);
+                .authorizedGrantTypes("password", "refresh_token", "client_credentials")
+                .accessTokenValiditySeconds(600)//20 mins
+                .refreshTokenValiditySeconds(7200);//2 hrs
     }
 
     @Override
